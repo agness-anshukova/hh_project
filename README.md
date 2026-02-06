@@ -1,29 +1,90 @@
-# Анализ резюме из HeadHunter
-В проекте осуществляется преобразование, исследование и очистка данных о резюме.
-Данные можно скачать по ссылке <https://drive.google.com/file/d/1jhRb4pokG9-WwTAcMm3hWl0Czv-WCpQ5/view?usp=sharing>
+# Resume Analysis from HeadHunter (hh_project)
 
-## Основные результаты:
-* В исходном файле 44 744 строк. Из них 168 строк содержат пропуски в графе "Опыт работы", 2 - пропуски в графе "Последняя/нынешняя должность", 1 - в графе "Последнее/нынешнее место работы".
-* Данные представлнены за период с 10.04.2018г. по 15.05.2019г.
-* Категории уровня образования, представленные в резюме: неоконченное высшее, высшее, среднее специальное, среднее. 
-    * Высшее образование имеют 33743 соискателей.
-    * Неоконченное высшее образование имеют 4531 соискателей. 
-    * Среднее специальное образование имеют 5741 соискателей.
-    * Средний уровень образования имеют 559 соискателей.
-* Процент женских резюме составляет 19 процентов. Средний возраст соискателей составляет 32 года.
-* Медианный опыт работы (в месяцах) равен 100 месяцев.
-* В Москве проживают 37 процентов соискателей. В Санкт-Петербурге проживают 11 процентов соискателей. В городах-миллионниках проживают 16 процентов соискателей. В других городах проживают 35 процентов соискателей.
-* Одновременно и к переезду, и к командировкам готовы 32 процента соискателя.
-* Проектную работу и волонтерство ищут 436 соискателей. Вахтовым методом и с гибким графиком хотят работать 2311 соискатель.
-* Желаемая медианная заработная плата соискателей равна 59 тысяч руб.
-* Интервал возраста соискателя, где находится большинство данных, - в диапазоне от 27 до 36 лет.
-* Интервал опыта работы соискателя, где находится большинство данных, - в диапазоне от 57 месяцев до 100 месяцев (4.8 лет до 8.3 лет).
-* Интервал заработной платы, где находится большинство данных, - в диапазоне от 37 082 руб. до 95 000 руб.
-* Наибольший уровень ожидаемой зарплаты наблюдается для высшего образования, наименьший - для среднего и среднего специального.
-* Медианы желаемой заработной платы в категории городов "город-миллионник" и "другие" равны 40 000 руб. Медиана желаемой заработной платы в Москве составляет 85 000 руб. Медиана желаемой заработной платы в Санкт-Петербурге составляет 60 000 руб.
-* Соискатели, готовые одновременно и к переезду, и к командировкам, претендуют на большую заработную плату. 
+## Project Overview
 
-## Стек технологий:
-* **Python 3.13.9**
-* **Pandas:** обработка и очистка данных
-* **Seaborn & Matplotlib:** визуализация (тепловые карты, диаграммы рассеяния)
+This repository contains a **data analysis project** focused on processing, cleaning, and exploring a dataset of resumes collected from the HeadHunter job platform. The main goal is to extract useful insights about candidates’ education, experience, desired salary, location, and job preferences.
+
+The analysis demonstrates **data cleaning, exploratory data analysis (EDA), visualization, and insights presentation** using Python and Pandas. :contentReference[oaicite:1]{index=1}
+
+---
+
+## Dataset
+
+The dataset contains information from resumes, including:
+- Candidate demographics (age, gender, location)
+- Education level
+- Work experience
+- Desired salary
+- Job preferences
+
+You can download the raw dataset from:  
+**https://drive.google.com/file/d/1jhRb4pokG9-WwTAcMm3hWl0Czv-WCpQ5/view?usp=sharing**
+
+---
+
+## Technologies & Libraries
+
+This project uses:
+
+- Python
+- Pandas (data processing)
+- Seaborn & Matplotlib (visualizations)
+- Jupyter Notebook
+
+All required dependencies are listed in `requirements.txt`.
+
+---
+
+## Key Insights
+
+These are the main insights your analysis notebook explores:
+
+- The dataset contains **44,744 rows**, with some missing values in key columns like work experience and current position. :contentReference[oaicite:2]{index=2}  
+- Education breakdown shows that **most applicants have a higher education degree**. :contentReference[oaicite:3]{index=3}  
+- Median work experience is around **100 months (≈8 years)**. :contentReference[oaicite:4]{index=4}  
+- **Gender distribution** shows around 19% female applicants. :contentReference[oaicite:5]{index=5}  
+- **Location distribution** indicates a large share of applicants from Moscow and Saint Petersburg. :contentReference[oaicite:6]{index=6}  
+
+These findings can be useful for HR analytics, labour market studies, or shaping hiring strategies.
+
+---
+
+## How to Run This Project
+
+To run this analysis locally:
+
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/agness-anshukova/hh_project.git
+    cd hh_project
+    ```
+
+2. **Create a virtual environment**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # MacOS / Linux
+    # or
+    venv\Scripts\activate      # Windows
+    ```
+
+3. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Open the Jupyter Notebook**
+    ```bash
+    jupyter notebook
+    ```
+
+5. Run the notebook cells to explore the data cleaning steps, visualizations, and conclusions.
+
+
+---
+
+## Notes
+
+- Some parts of the notebook may contain comments and labels in Russian — the key insights are described in English in this README.
+- This project does not include a deployed dashboard, but the Jupyter Notebook provides clear visuals and findings.
+
+
